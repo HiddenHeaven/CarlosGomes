@@ -1,0 +1,23 @@
+{
+  "name": "academia_accenture2025",
+  "version": "1.0.0",
+  "description": "Academia_Accenture2025",
+  "license": "ISC",
+  "author": "Carlos Ricardo Gomes da Silva",
+  "type": "commonjs",
+  "main": "index.js",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalstepDefinitions": false,
+    "stepDefinitions": "cypress/support/step-definition/"
+  },
+"scripts": {
+  "gerar:dados": "node cypress/support/gerar-dados.js",
+  "open": "npm run gerar:dados && cypress open",
+  "test": "npm run gerar:dados && cypress run"
+},
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "cypress": "^14.5.4",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
